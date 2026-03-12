@@ -3,8 +3,9 @@ import java.util.ArrayList;
 public class Show {
     String title;
     int duration;
-    private Director director;
+    private final Director director;
     public ArrayList<Actor> listOfActors;
+
 
     public Show(String title, int duration, Director director, ArrayList<Actor> listOfActors) {
         this.title = title;
@@ -12,8 +13,6 @@ public class Show {
         this.director = director;
         this.listOfActors = listOfActors;
     }
-
-
 
     public void printActors() {
         System.out.println("Список актёров для спектакля " + title + ":");
@@ -44,14 +43,9 @@ public class Show {
         } else {
             System.out.println("Актёр не найден");
         }
-
-            }
+    }
 
     public Director getDirector() {
         return director;
-    }
-
-    public void setDirector(Director director) {
-        this.director = director;
     }
 }

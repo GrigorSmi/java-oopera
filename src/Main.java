@@ -48,7 +48,7 @@ public class Main {
         EO.printActors();
         System.out.println("----------------------------------------" + "\n");
 
-        // то, что дальше это просто из интереса, в ТЗ это не требуется
+        // то, что дальше это просто из интереса, в ТЗ этого нет
         System.out.println("Режиссёр спектакля " + MD.title + " : " + MD.getDirector());
         System.out.println("Режиссёр спектакля " + LO.title + " : " + LO.getDirector());
         System.out.println("Режиссёр спектакля " + EO.title + " : " + EO.getDirector());
@@ -58,5 +58,7 @@ public class Main {
         System.out.println("Автор музыки: " + MD.title + " : " + MD.musicAuthor);
         System.out.println("Автор музыки: " + LO.title + " : " + LO.musicAuthor);
         System.out.println("Автор музыки: " + EO.title + " : " + EO.musicAuthor);
+
+        System.out.println("Размер хора в опере " + EO.title + " : " + EO.getChoirSize());
     }
 }
