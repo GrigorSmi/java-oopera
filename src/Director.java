@@ -10,10 +10,9 @@ public class Director extends Person {
 
     @Override
     public String toString() {
-        return "Director{name =" + super.getName() + '\'' +
-                ", surname='" + super.getSurname() + '\'' +
-                ", gender=" + super.getGender() + '\'' +
-                "numberOfShows=" + numberOfShows +
-                '}';
+        return super.getName() + ' ' +
+                 super.getSurname() + ' ' +
+                "поставлено уже " + numberOfShows +
+                " шоу";
     }
 }

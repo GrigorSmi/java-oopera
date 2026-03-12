@@ -14,7 +14,7 @@ public class MusicalShow extends Show {
 
     @Override
     public String toString() {
-        return "Текст либеретто" + librettoText;
+        return "Текст либеретто: " + librettoText;
     }
 
 
