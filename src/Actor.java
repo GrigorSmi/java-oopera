@@ -1,11 +1,31 @@
-public class Actor extends Person {
+import java.util.Objects;
 
-    int height;
+public class Actor extends Person {
+    private int height;
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
 
     public Actor(String name, String surname, Gender gender, int height) {
-        this.name = name;
-        this.surname = surname;
-        this.gender = gender;
+        super (name, surname, gender);
         this.height = height;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Actor actor = (Actor) o;
+        return height == actor.height;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(height);
     }
 }
