@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 public class MusicalShow extends Show {
-    public Person musicAuthor;
-    public String librettoText;
+    private final Person musicAuthor;
+    private final String librettoText;
 
 
     public MusicalShow(String title, int duration, Director director, ArrayList<Actor> listOfActors,
@@ -15,6 +15,11 @@ public class MusicalShow extends Show {
     @Override
     public String toString() {
         return "Текст либеретто: " + librettoText;
+    }
+
+
+    public Person getMusicAuthor() {
+        return musicAuthor;
     }
 
 

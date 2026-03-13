@@ -40,25 +40,26 @@ public class Main {
         System.out.println(EO);
         System.out.println("----------------------------------------" + "\n");
 
-        EO.applayActor(Serafima, Dmitriy);
+        EO.replaceActor(Serafima, "Лебедев");
         EO.printActors();
         System.out.println("----------------------------------------" + "\n");
 
-        EO.applayActor(Serafima, Grigory);
+        EO.replaceActor(Serafima, "Артистов");
         EO.printActors();
         System.out.println("----------------------------------------" + "\n");
 
-        // то, что дальше это просто из интереса, в ТЗ этого нет
-        System.out.println("Режиссёр спектакля " + MD.title + " : " + MD.getDirector());
-        System.out.println("Режиссёр спектакля " + LO.title + " : " + LO.getDirector());
-        System.out.println("Режиссёр спектакля " + EO.title + " : " + EO.getDirector());
+        // теперь это, чтобы проверять исправленные ошибки по ревью
 
-        System.out.println("Хореограф балета " + LO.title + " : " + LO.choreographer);
+        MD.printDirector();
+        LO.printDirector();
+        EO.printDirector();
 
-        System.out.println("Автор музыки: " + MD.title + " : " + MD.musicAuthor);
-        System.out.println("Автор музыки: " + LO.title + " : " + LO.musicAuthor);
-        System.out.println("Автор музыки: " + EO.title + " : " + EO.musicAuthor);
+        System.out.println("Хореограф балета " + LO.getTitle() + " : " + LO.getChoreographer());
 
-        System.out.println("Размер хора в опере " + EO.title + " : " + EO.getChoirSize());
+        System.out.println("Автор музыки: " + MD.getTitle() + " : " + MD.getMusicAuthor());
+        System.out.println("Автор музыки: " + LO.getTitle() + " : " + LO.getMusicAuthor());
+        System.out.println("Автор музыки: " + EO.getTitle() + " : " + EO.getMusicAuthor());
+
+        System.out.println("Размер хора в опере " + EO.getTitle() + " : " + EO.getChoirSize());
     }
 }

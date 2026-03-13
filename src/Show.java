@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
 public class Show {
-    String title;
-    int duration;
+    private String title;
+    private int duration;
     private final Director director;
-    public ArrayList<Actor> listOfActors;
+    private ArrayList<Actor> listOfActors;
 
 
     public Show(String title, int duration, Director director, ArrayList<Actor> listOfActors) {
@@ -34,18 +34,40 @@ public class Show {
                 newActor.getSurname() + " (" + newActor.getHeight() + ")");
     }
 
-    public void applayActor(Actor oldActor, Actor newActor) {
+    public void replaceActor(Actor newActor, String surname) {
+        int index = -1;
 
-        int index = listOfActors.indexOf(oldActor);
+                for (int i = 0; i < listOfActors.size(); i++) {
+            Actor currentActor = listOfActors.get(i);
+            if (currentActor.surname.equals(surname)) {
+                index = i;
+                break;
+            }
+        }
+
         if (index != -1) {
             listOfActors.set(index, newActor);
-            System.out.println("Актёр заменён");
+            System.out.println("Актёр с фамилией '" + surname + "' заменён на " +
+                    newActor.name + " " + newActor.surname);
         } else {
-            System.out.println("Актёр не найден");
+            System.out.println("Актёр с фамилией '" + surname + "' не найден");
         }
     }
 
     public Director getDirector() {
         return director;
     }
+
+    public void printDirector() {
+        if (getDirector() == null) {
+            System.out.println("Режиссёра нет");
+        } else {
+            System.out.println("Режиссёр: " + getDirector());
+        }
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
 }

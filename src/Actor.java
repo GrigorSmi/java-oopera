@@ -15,13 +15,16 @@ public class Actor extends Person {
 
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Actor actor = (Actor) o;
-        return height == actor.height;
+        return height == actor.height &&
+                Objects.equals(name, actor.name) &&
+                Objects.equals(surname, actor.surname);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(height);
+        return Objects.hash(name, surname, height);
     }
 }

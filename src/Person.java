@@ -1,9 +1,9 @@
 import java.util.Objects;
 
 public class Person {
-    private final String name;
-    private final String surname;
-    private final Gender gender;
+    protected final String name;
+    protected final String surname;
+    protected final Gender gender;
 
 
     public Person(String name, String surname, Gender gender) {
